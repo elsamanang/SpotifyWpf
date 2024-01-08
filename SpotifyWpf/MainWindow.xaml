@@ -6,45 +6,114 @@
         xmlns:local="clr-namespace:SpotifyWpf"
         mc:Ignorable="d"
         Title="Home" Height="450" Width="800">
-    <Border>
-        <Grid Background="#000" x:Name="main">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="100"/>
-            </Grid.RowDefinitions>
-            <Grid Grid.Row="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="209*"/>
-                    <ColumnDefinition Width="591*"/>
-                </Grid.ColumnDefinitions>
-                <StackPanel Grid.Column="0" Margin="8 10 8 0">
-                    <StackPanel Background="#191919">
-                        <TextBlock Text="test" Margin="5"/>
-                        <TextBlock Text="test" Margin="5"/>
+
+    <Window.Resources>
+        <Style x:Key="sideMenu" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="Margin" Value="14" />
+            <Setter Property="Foreground" Value="#b3b3b3" />
+            <Setter Property="FontWeight" Value="Bold" />
+        </Style>
+    </Window.Resources>
+
+    <Grid Background="#000" x:Name="main">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="209*"/>
+                <ColumnDefinition Width="591*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Margin="8 10 8 0">
+                <Border Background="#191919" CornerRadius="6">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE80F;" FontSize="18" Style="{StaticResource sideMenu}"/>
+                            <TextBlock Text="Accueil" Style="{StaticResource sideMenu}"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE71E;" FontSize="18" Style="{StaticResource sideMenu}"/>
+                            <TextBlock Text="Recherche" Style="{StaticResource sideMenu}"/>
+                        </StackPanel>
                     </StackPanel>
-                    <StackPanel Background="#191919" Margin="0 10">
-                        <TextBlock Text="test" Margin="5"/>
-                        <TextBlock Text="test" Margin="5"/>
+                </Border>
+                <Border Background="#191919" CornerRadius="6" Margin="0 10">
+                    <StackPanel>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="50"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Orientation="Horizontal" Grid.Column="0">
+                                <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE8F1;" FontSize="18" FontWeight="Medium"  Style="{StaticResource sideMenu}"/>
+                                <TextBlock Text="Bibliotheque" Style="{StaticResource sideMenu}"/>
+                            </StackPanel>
+                            <TextBlock Grid.Column="1" FontFamily="Segoe MDL2 Assets" Text="&#xE948;" FontSize="18" Style="{StaticResource sideMenu}"/>
+                        </Grid>
+                        <StackPanel>
+                            
+                        </StackPanel>
                     </StackPanel>
-                </StackPanel>
-                <StackPanel Background="#191919" Grid.Column="1" Margin="2 10 0 0">
+                </Border>
+            </StackPanel>
+            <Border Background="#191919" Margin="2 10 1 0" Grid.Column="1" CornerRadius="6">
+                <StackPanel Margin="5">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition Width="170"/>
                         </Grid.ColumnDefinitions>
                         <StackPanel Grid.Column="0" Orientation="Horizontal">
-                            <Button Content="gauche" Margin="2" />
-                            <Button Content="droite" Margin="2" />
+                            <Button BorderBrush="Transparent" Background="#000000" Padding="12" Margin="2" HorizontalAlignment="Center">
+                                <TextBlock FontSize="14" FontFamily="Segoe MDL2 Assets" Text="&#xE96F;" Foreground="White" FontWeight="DemiBold"/>
+                                <Button.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="20"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+                            <Button BorderBrush="Transparent" Background="#000000" Padding="12" Margin="2" HorizontalAlignment="Center">
+                                <TextBlock FontSize="14" FontFamily="Segoe MDL2 Assets" Text="&#xE970;" Foreground="White" FontWeight="DemiBold"/>
+                                <Button.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="20"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
                         </StackPanel>
                         <StackPanel Grid.Column="1" Orientation="Horizontal">
-                            <Button Content="gauche gauche" Margin="2" />
-                            <Button Content="droite" Margin="2" />
+                            <Button Background="Transparent"
+                                    Padding="5 0" Margin="2"
+                                    BorderThickness="1" BorderBrush="White"
+                                >
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontFamily="Segoe MDL2 Assets"
+                                           Text="&#xE118;" Foreground="White"
+                                           Margin="2"
+                                    />
+                                    <TextBlock Text="installer l'appli" FontWeight="DemiBold" Margin="2 0" Foreground="White" />
+                                </StackPanel>
+                                <Button.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="10"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+                            <Button BorderBrush="Transparent" Background="#000000" Padding="12" Margin="2" HorizontalAlignment="Center">
+                                <TextBlock FontSize="14" FontFamily="Segoe MDL2 Assets" Text="&#xE13D;" Foreground="White" FontWeight="DemiBold"/>
+                                <Button.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="20"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
                         </StackPanel>
                     </Grid>
                 </StackPanel>
-            </Grid>
-            <StackPanel Grid.Row="1"></StackPanel>
+            </Border>
         </Grid>
-    </Border>
+        <StackPanel Grid.Row="1"></StackPanel>
+    </Grid>
 </Window>
