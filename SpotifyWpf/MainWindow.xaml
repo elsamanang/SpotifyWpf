@@ -1,0 +1,50 @@
+﻿<Window x:Class="SpotifyWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SpotifyWpf"
+        mc:Ignorable="d"
+        Title="Home" Height="450" Width="800">
+    <Border>
+        <Grid Background="#000" x:Name="main">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="209*"/>
+                    <ColumnDefinition Width="591*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Margin="8 10 8 0">
+                    <StackPanel Background="#191919">
+                        <TextBlock Text="test" Margin="5"/>
+                        <TextBlock Text="test" Margin="5"/>
+                    </StackPanel>
+                    <StackPanel Background="#191919" Margin="0 10">
+                        <TextBlock Text="test" Margin="5"/>
+                        <TextBlock Text="test" Margin="5"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Background="#191919" Grid.Column="1" Margin="2 10 0 0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="150"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Orientation="Horizontal">
+                            <Button Content="gauche" Margin="2" />
+                            <Button Content="droite" Margin="2" />
+                        </StackPanel>
+                        <StackPanel Grid.Column="1" Orientation="Horizontal">
+                            <Button Content="gauche gauche" Margin="2" />
+                            <Button Content="droite" Margin="2" />
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+            <StackPanel Grid.Row="1"></StackPanel>
+        </Grid>
+    </Border>
+</Window>
